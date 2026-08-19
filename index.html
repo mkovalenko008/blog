@@ -1,1 +1,412 @@
-<h1>Blog coming soon</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — Mikhail Kovalenko</title>
+<meta name="description" content="Design, AI tools, and freelance insights for agencies and studios — by Mikhail Kovalenko.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700;900&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue: #2A5298;
+    --black: #080808;
+    --gray: #6b6b6b;
+    --border: #e5e5e5;
+    --cat-uiux: #2A5298;
+    --cat-ai: #8B3FD1;
+    --cat-tools: #C2410C;
+    --cat-business: #15803D;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter Tight', -apple-system, sans-serif;
+    color: var(--black);
+    background: #ffffff;
+    line-height: 1.5;
+  }
+  h1, h2, h3, .logo, .eyebrow, .tag, .post-card h2 {
+    font-family: 'Oswald', sans-serif;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 6vw;
+    border-bottom: 1px solid var(--border);
+  }
+  .logo {
+    font-weight: 900;
+    font-size: 22px;
+    letter-spacing: -0.5px;
+    color: var(--blue);
+    text-decoration: none;
+  }
+  nav a {
+    color: var(--black);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    margin-left: 32px;
+  }
+  nav a:hover { color: var(--blue); }
+  .hero {
+    padding: 80px 6vw 60px;
+    max-width: 1140px;
+  }
+  .hero p.eyebrow {
+    color: var(--blue);
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+  }
+  .hero h1 {
+    font-size: 80px;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1.05;
+    letter-spacing: -1px;
+  }
+  .hero .sub {
+    margin-top: 20px;
+    font-size: 17px;
+    color: var(--gray);
+    max-width: 100%;
+    white-space: nowrap;
+  }
+  .categories {
+    display: flex;
+    gap: 12px;
+    padding: 0 6vw 40px;
+    flex-wrap: wrap;
+  }
+  .categories a {
+    padding: 8px 18px;
+    border: none;
+    border-radius: 0;
+    background: #f7f7f7;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--black);
+    transition: 0.15s;
+  }
+  .categories a:hover, .categories a.active {
+    background: var(--blue);
+    color: #fff;
+  }
+  .categories a:hover .count, .categories a.active .count {
+    color: #ffffffcc;
+  }
+  .categories a .count {
+    color: #585858;
+    font-weight: 500;
+  }
+  .posts {
+    padding: 0 6vw 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 32px;
+  }
+  .post-card {
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+    text-decoration: none;
+    color: var(--black);
+    display: flex;
+    flex-direction: column;
+    transition: 0.2s;
+  }
+  .post-card:hover {
+    border-color: transparent;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    transform: translateY(-4px);
+  }
+  .post-card .thumb {
+    background: linear-gradient(135deg, var(--cat, var(--blue)) 0%, #1a2f5c 55%, #080808 100%);
+    aspect-ratio: 16/10;
+    position: relative;
+    overflow: hidden;
+  }
+  .post-card .thumb::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 20% 30%, rgba(255,255,255,0.12) 0%, transparent 40%),
+      radial-gradient(circle at 80% 70%, rgba(255,255,255,0.08) 0%, transparent 45%);
+  }
+  .post-card .content { padding: 22px; }
+  .post-card .tag {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--cat, var(--blue));
+    background: color-mix(in srgb, var(--cat, var(--blue)) 12%, white);
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+    padding: 4px 10px;
+    border-radius: 3px;
+    display: inline-block;
+  }
+  .post-card.cat-uiux { --cat: var(--cat-uiux); }
+  .post-card.cat-ai { --cat: var(--cat-ai); }
+  .post-card.cat-tools { --cat: var(--cat-tools); }
+  .post-card.cat-business { --cat: var(--cat-business); }
+  .post-card h2 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 10px;
+  }
+  .post-card p.excerpt {
+    font-size: 14px;
+    color: var(--gray);
+    margin-bottom: 14px;
+  }
+  .post-card .meta {
+    font-size: 13px;
+    color: var(--gray);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--border);
+    padding-top: 12px;
+  }
+  .post-card .meta .read-link {
+    color: var(--blue);
+    font-weight: 700;
+  }
+  footer {
+    background: var(--black);
+    padding: 20px 6vw;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #999;
+  }
+  footer a { color: #ffffff; text-decoration: none; font-weight: 600; }
+  .contact-panel {
+    width: 100%;
+    margin: 40px 0 0;
+    padding: 150px 6vw;
+    background: var(--black);
+    border-radius: 0;
+    border-bottom: 1px solid #212121;
+    text-align: left;
+  }
+  .contact-panel .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ffffff;
+    margin-bottom: 16px;
+  }
+  .contact-panel .badge svg {
+    width: 14px;
+    height: 14px;
+  }
+  .contact-panel h2 {
+    font-size: 80px;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1.15;
+    margin-bottom: 16px;
+    color: #ffffff;
+  }
+  .contact-panel h2 em {
+    color: #2A5298;
+    font-style: normal;
+  }
+  .contact-panel .sub {
+    font-size: 17px;
+    color: #b0b0b0;
+    max-width: 480px;
+    margin: 0 0 80px;
+  }
+  .contact-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    max-width: 100%;
+    margin: 0 0 32px;
+  }
+  .contact-card {
+    background: #0F0F0F;
+    border: none;
+    border-radius: 6px;
+    padding: 32px;
+    text-align: left;
+  }
+  .contact-card h3 {
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #ffffff;
+  }
+  .contact-card p {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 80px;
+  }
+  .contact-card a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    padding: 0 0 6px;
+    border-bottom: 1px solid #fff;
+    border-radius: 0;
+  }
+  .contact-card a .arrow {
+    display: inline-flex;
+    transition: transform 0.3s;
+  }
+  .contact-card a .arrow svg {
+    width: 16px;
+    height: 16px;
+  }
+  .contact-card a:hover .arrow { transform: rotate(90deg); }
+  .contact-panel .note {
+    font-size: 13px;
+    color: #999;
+    text-align: left;
+  }
+
+  @media (max-width: 640px) {
+    header { flex-direction: column; align-items: flex-start; gap: 14px; }
+    nav a { margin-left: 0; margin-right: 20px; }
+    .hero .sub { white-space: normal; }
+    .hero h1 { font-size: 40px; }
+    .contact-panel { padding: 80px 6vw; }
+    .contact-panel h2 { font-size: 40px; }
+    .contact-cards { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="https://designer-mkovalenko.ru/en/" class="logo">KOVALENKO</a>
+  <nav>
+    <a href="https://designer-mkovalenko.ru/en/">Portfolio</a>
+    <a href="https://designer-mkovalenko.ru/en/#contacts">Contacts</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <p class="eyebrow">Design &amp; AI Journal</p>
+  <h1>Notes on design, tools,<br>and the business behind it</h1>
+  <p class="sub">Practical UI/UX insights, AI workflows, and lessons from real client work — by Mikhail Kovalenko.</p>
+</section>
+
+<div class="categories">
+  <a href="#" class="active">All <span class="count">(0)</span></a>
+  <a href="#">UI/UX Practice <span class="count">(0)</span></a>
+  <a href="#">AI in Design <span class="count">(0)</span></a>
+  <a href="#">Tools &amp; Services <span class="count">(0)</span></a>
+  <a href="#">Business &amp; Clients <span class="count">(0)</span></a>
+</div>
+
+<div class="posts" id="posts">
+  <!-- POSTS_START -->
+  <a href="/posts/5-ui-ux-principles-conversions.html" class="post-card cat-uiux">
+    <div class="thumb"></div>
+    <div class="content">
+      <span class="tag">UI/UX Practice</span>
+      <h2>5 UI/UX Principles That Actually Improve Conversions</h2>
+      <p class="excerpt">Not theory — five things I actually apply on client projects, with the reasoning behind each one.</p>
+      <div class="meta">
+        <span>Aug 18, 2026</span>
+        <span class="read-link">Read →</span>
+      </div>
+    </div>
+  </a>
+  <a href="/posts/ai-tools-for-figma-2026.html" class="post-card cat-ai">
+    <div class="thumb"></div>
+    <div class="content">
+      <span class="tag">AI in Design</span>
+      <h2>5 AI Tools That Actually Speed Up Figma Work</h2>
+      <p class="excerpt">Which AI plugins save real hours in Figma, and which ones just look good in a demo video.</p>
+      <div class="meta">
+        <span>Aug 15, 2026</span>
+        <span class="read-link">Read →</span>
+      </div>
+    </div>
+  </a>
+  <a href="/posts/webflow-vs-wordpress-2026.html" class="post-card cat-tools">
+    <div class="thumb"></div>
+    <div class="content">
+      <span class="tag">Tools &amp; Services</span>
+      <h2>Webflow vs WordPress: What I Actually Pick for Clients</h2>
+      <p class="excerpt">A practical comparison based on 400+ projects, not a feature checklist.</p>
+      <div class="meta">
+        <span>Aug 12, 2026</span>
+        <span class="read-link">Read →</span>
+      </div>
+    </div>
+  </a>
+  <a href="/posts/how-to-brief-a-designer.html" class="post-card cat-business">
+    <div class="thumb"></div>
+    <div class="content">
+      <span class="tag">Business &amp; Clients</span>
+      <h2>How to Brief a Designer So You Actually Get What You Want</h2>
+      <p class="excerpt">The five questions that turn a vague request into a project that ships on time.</p>
+      <div class="meta">
+        <span>Aug 9, 2026</span>
+        <span class="read-link">Read →</span>
+      </div>
+    </div>
+  </a>
+  <!-- POSTS_END -->
+</div>
+
+<div class="contact-panel">
+  <span class="badge">
+    Get in touch
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M7 7H17V17" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M17 7L7 17" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </span>
+  <h2>Have a project<br>or just a <em>question?</em></h2>
+  <p class="sub">Pick whichever is easier for you — both go straight to me</p>
+
+  <div class="contact-cards">
+    <div class="contact-card">
+      <h3>Send a message</h3>
+      <p>Tell me what you're working on and I'll reply within 24 hours</p>
+      <a href="https://designer-mkovalenko.ru/en/#contacts">Contact me <span class="arrow"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 7H17V16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+    </div>
+    <div class="contact-card">
+      <h3>See the work first</h3>
+      <p>Browse full case studies and past projects before reaching out</p>
+      <a href="https://designer-mkovalenko.ru/en/">View portfolio <span class="arrow"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 7H17V16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+    </div>
+  </div>
+
+  <p class="note">No pressure, no sales pitch — just a conversation.</p>
+</div>
+
+<footer>
+  <span>&copy; 2026 Mikhail Kovalenko</span>
+  <a href="https://designer-mkovalenko.ru/en/">designer-mkovalenko.ru</a>
+</footer>
+
+</body>
+</html>
