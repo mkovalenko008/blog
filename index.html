@@ -25,7 +25,7 @@
     background: #ffffff;
     line-height: 1.5;
   }
-  h1, h2, h3, .logo, .eyebrow, .tag, .post-card h2 {
+  h1, h2, h3, .logo, .eyebrow, .tag, .post-row h2 {
     font-family: 'Oswald', sans-serif;
   }
   header {
@@ -106,79 +106,65 @@
   }
   .posts {
     padding: 0 6vw 100px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 32px;
   }
-  .post-card {
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    overflow: hidden;
+  .post-row {
+    display: grid;
+    grid-template-columns: 180px repeat(11, 1fr);
+    gap: 24px;
+    padding: 40px 0;
+    border-top: 1px solid var(--border);
     text-decoration: none;
     color: var(--black);
-    display: flex;
-    flex-direction: column;
-    transition: 0.2s;
+    align-items: start;
+    transition: 0.15s;
   }
-  .post-card:hover {
-    border-color: transparent;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-    transform: translateY(-4px);
-  }
-  .post-card .thumb {
-    background: linear-gradient(135deg, var(--cat, var(--blue)) 0%, #1a2f5c 55%, #080808 100%);
-    aspect-ratio: 16/10;
-    position: relative;
-    overflow: hidden;
-  }
-  .post-card .thumb::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background:
-      radial-gradient(circle at 20% 30%, rgba(255,255,255,0.12) 0%, transparent 40%),
-      radial-gradient(circle at 80% 70%, rgba(255,255,255,0.08) 0%, transparent 45%);
-  }
-  .post-card .content { padding: 22px; }
-  .post-card .tag {
+  .post-row:first-child { border-top: none; }
+  .post-row:hover { background: #fafafa; }
+  .post-row .tag {
+    grid-column: 1 / 2;
     font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
     color: var(--cat, var(--blue));
     background: color-mix(in srgb, var(--cat, var(--blue)) 12%, white);
     letter-spacing: 0.5px;
-    margin-bottom: 12px;
     padding: 4px 10px;
     border-radius: 3px;
     display: inline-block;
+    width: fit-content;
+    white-space: nowrap;
+    height: fit-content;
   }
-  .post-card.cat-uiux { --cat: var(--cat-uiux); }
-  .post-card.cat-ai { --cat: var(--cat-ai); }
-  .post-card.cat-tools { --cat: var(--cat-tools); }
-  .post-card.cat-business { --cat: var(--cat-business); }
-  .post-card h2 {
-    font-size: 20px;
+  .post-row.cat-uiux { --cat: var(--cat-uiux); }
+  .post-row.cat-ai { --cat: var(--cat-ai); }
+  .post-row.cat-tools { --cat: var(--cat-tools); }
+  .post-row.cat-business { --cat: var(--cat-business); }
+  .post-title-col { grid-column: 2 / 7; }
+  .post-title-col h2 {
+    font-size: 22px;
     font-weight: 700;
     line-height: 1.3;
     margin-bottom: 10px;
   }
-  .post-card p.excerpt {
-    font-size: 14px;
+  .post-date {
+    font-size: 13px;
+    color: var(--gray);
+  }
+  .post-desc-col { grid-column: 7 / 13; }
+  .post-desc-col p {
+    font-size: 15px;
     color: var(--gray);
     margin-bottom: 14px;
   }
-  .post-card .meta {
+  .post-row .read-link {
     font-size: 13px;
-    color: var(--gray);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 1px solid var(--border);
-    padding-top: 12px;
-  }
-  .post-card .meta .read-link {
-    color: var(--blue);
     font-weight: 700;
+    color: var(--blue);
+  }
+  .post-row:hover .read-link { text-decoration: underline; }
+  @media (max-width: 900px) {
+    .post-row { grid-template-columns: 1fr; gap: 8px; padding: 28px 0; }
+    .post-row .tag, .post-title-col, .post-desc-col { grid-column: 1 / -1; }
   }
   footer {
     background: var(--black);
@@ -325,28 +311,26 @@
 
 <div class="posts" id="posts">
     <!-- POSTS_START -->
-  <a href="/posts/7-ai-figma-plugins-that-actually-save-time-in-2026.html" class="post-card cat-ai">
-    <div class="thumb"></div>
-    <div class="content">
-      <span class="tag">AI in Design</span>
+  <a href="/posts/7-ai-figma-plugins-that-actually-save-time-in-2026.html" class="post-row cat-ai">
+    <span class="tag">AI in Design</span>
+    <div class="post-title-col">
       <h2>7 AI Figma Plugins That Actually Save Time in 2026</h2>
-      <p class="excerpt">A no-hype review of 7 AI Figma plugins worth adopting in 2026 — what they really save, and where they still need human review.</p>
-      <div class="meta">
-        <span>Aug 21, 2026</span>
-        <span class="read-link">Read →</span>
-      </div>
+      <span class="post-date">Aug 21, 2026</span>
+    </div>
+    <div class="post-desc-col">
+      <p>A no-hype review of 7 AI Figma plugins worth adopting in 2026 — what they really save, and where they still need human review.</p>
+      <span class="read-link">Read →</span>
     </div>
   </a>
-  <a href="/posts/how-to-read-a-design-in-3-seconds-the-squint-test.html" class="post-card cat-uiux">
-    <div class="thumb"></div>
-    <div class="content">
-      <span class="tag">UI/UX Practice</span>
+  <a href="/posts/how-to-read-a-design-in-3-seconds-the-squint-test.html" class="post-row cat-uiux">
+    <span class="tag">UI/UX Practice</span>
+    <div class="post-title-col">
       <h2>How to Read a Design in 3 Seconds: The Squint Test</h2>
-      <p class="excerpt">A practical guide to the squint test — a fast, brutal way to check if your design hierarchy actually works before a client ever sees it.</p>
-      <div class="meta">
-        <span>Aug 21, 2026</span>
-        <span class="read-link">Read →</span>
-      </div>
+      <span class="post-date">Aug 21, 2026</span>
+    </div>
+    <div class="post-desc-col">
+      <p>A practical guide to the squint test — a fast, brutal way to check if your design hierarchy actually works before a client ever sees it.</p>
+      <span class="read-link">Read →</span>
     </div>
   </a>
   <!-- POSTS_END -->
@@ -386,7 +370,7 @@
 
   <script>
   (function() {
-    var cards = document.querySelectorAll('.post-card');
+    var cards = document.querySelectorAll('.post-row');
     var catLinks = document.querySelectorAll('.categories a');
 
     catLinks.forEach(function(link) {
