@@ -316,11 +316,11 @@
 </section>
 
 <div class="categories">
-  <a href="#" class="active">All <span class="count">(0)</span></a>
-  <a href="#">UI/UX Practice <span class="count">(0)</span></a>
-  <a href="#">AI in Design <span class="count">(0)</span></a>
-  <a href="#">Tools &amp; Services <span class="count">(0)</span></a>
-  <a href="#">Business &amp; Clients <span class="count">(0)</span></a>
+  <a href="#" class="active" data-cat="all">All <span class="count">(0)</span></a>
+  <a href="#" data-cat="cat-uiux">UI/UX Practice <span class="count">(0)</span></a>
+  <a href="#" data-cat="cat-ai">AI in Design <span class="count">(0)</span></a>
+  <a href="#" data-cat="cat-tools">Tools &amp; Services <span class="count">(0)</span></a>
+  <a href="#" data-cat="cat-business">Business &amp; Clients <span class="count">(0)</span></a>
 </div>
 
 <div class="posts" id="posts">
@@ -383,6 +383,32 @@
   <span>&copy; 2026 Mikhail Kovalenko</span>
   <a href="https://designer-mkovalenko.ru/en/">designer-mkovalenko.ru</a>
 </footer>
+
+  <script>
+  (function() {
+    var cards = document.querySelectorAll('.post-card');
+    var catLinks = document.querySelectorAll('.categories a');
+
+    catLinks.forEach(function(link) {
+      var cat = link.dataset.cat;
+      var count = cat === 'all' ? cards.length : Array.from(cards).filter(function(c) { return c.classList.contains(cat); }).length;
+      var countSpan = link.querySelector('.count');
+      if (countSpan) countSpan.textContent = '(' + count + ')';
+    });
+
+    catLinks.forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        catLinks.forEach(function(l) { l.classList.remove('active'); });
+        link.classList.add('active');
+        var cat = link.dataset.cat;
+        cards.forEach(function(card) {
+          card.style.display = (cat === 'all' || card.classList.contains(cat)) ? '' : 'none';
+        });
+      });
+    });
+  })();
+</script>
 
 </body>
 </html>
