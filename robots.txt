@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://blog.designer-mkovalenko.ru/sitemap.xml
