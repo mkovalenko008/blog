@@ -163,10 +163,10 @@
     border-radius: 3px;
     display: inline-block;
   }
-  article.cat-uiux { --cat: var(--cat-uiux); }
-  article.cat-ai { --cat: var(--cat-ai); }
-  article.cat-tools { --cat: var(--cat-tools); }
-  article.cat-business { --cat: var(--cat-business); }
+  .page.cat-uiux { --cat: var(--cat-uiux); }
+  .page.cat-ai { --cat: var(--cat-ai); }
+  .page.cat-tools { --cat: var(--cat-tools); }
+  .page.cat-business { --cat: var(--cat-business); }
   h1 {
     font-size: clamp(32px, 5vw, 48px);
     font-weight: 900;
@@ -255,7 +255,6 @@
   .toc a { transition: 0.2s; }
   .toc a.active {
     color: var(--cat, var(--blue));
-    font-weight: 700;
   }
   .toc a.active::before { color: var(--cat, var(--blue)); }
 
@@ -545,7 +544,7 @@
   <span class="current">7 AI-плагинов для Figma, которые реально экономят время в 2026</span>
 </div>
 
-<div class="page">
+<div class="page cat-ai">
   <aside class="toc">
     <div class="toc-title">Содержание</div>
     <ol>
