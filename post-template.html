@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{{POST_TITLE}} — Mikhail Kovalenko</title>
 <meta name="description" content="{{POST_DESCRIPTION}}">
+<link rel="alternate" hreflang="en" href="https://blog.designer-mkovalenko.ru/posts/{{POST_SLUG}}.html">
+<link rel="alternate" hreflang="ru" href="https://blog.designer-mkovalenko.ru/ru/posts/{{POST_SLUG}}.html">
+<link rel="alternate" hreflang="x-default" href="https://blog.designer-mkovalenko.ru/posts/{{POST_SLUG}}.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700;900&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -50,6 +53,13 @@
     margin-left: 32px;
   }
   nav a:hover { color: var(--blue); }
+  .lang-switch {
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 4px 10px;
+    font-size: 13px !important;
+  }
+  .lang-switch:hover { border-color: var(--blue); }
 
   .breadcrumbs {
     display: flex;
@@ -525,6 +535,7 @@
   <nav>
     <a href="https://designer-mkovalenko.ru/en/">Portfolio</a>
     <a href="https://designer-mkovalenko.ru/en/#contacts">Contacts</a>
+    <a href="/ru/posts/{{POST_SLUG}}.html" class="lang-switch">RU</a>
   </nav>
 </header>
 

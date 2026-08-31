@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blog — Mikhail Kovalenko</title>
-<meta name="description" content="Design, AI tools, and freelance insights for agencies and studios — by Mikhail Kovalenko.">
-<meta name="google-site-verification" content="GqyBPQnkL-H7-0dRCR48Y3OXiQnENYNvM_AmXldYWN0">
+<title>Блог — Михаил Коваленко</title>
+<meta name="description" content="Дизайн, AI-инструменты и советы для агентств и фрилансеров — от Михаила Коваленко.">
 <link rel="alternate" hreflang="en" href="https://blog.designer-mkovalenko.ru/">
 <link rel="alternate" hreflang="ru" href="https://blog.designer-mkovalenko.ru/ru/">
 <link rel="alternate" hreflang="x-default" href="https://blog.designer-mkovalenko.ru/">
@@ -85,7 +84,6 @@
     font-size: 17px;
     color: var(--gray);
     max-width: 100%;
-    white-space: nowrap;
   }
   .categories {
     display: flex;
@@ -288,7 +286,6 @@
   @media (max-width: 640px) {
     header { flex-direction: column; align-items: flex-start; gap: 14px; }
     nav a { margin-left: 0; margin-right: 20px; }
-    .hero .sub { white-space: normal; }
     .hero h1 { font-size: 40px; }
     .contact-panel { padding: 80px 6vw; }
     .contact-panel h2 { font-size: 40px; }
@@ -299,129 +296,63 @@
 <body>
 
 <header>
-  <a href="https://designer-mkovalenko.ru/en/" class="logo">KOVALENKO</a>
+  <a href="https://designer-mkovalenko.ru/" class="logo">KOVALENKO</a>
   <nav>
-    <a href="https://designer-mkovalenko.ru/en/">Portfolio</a>
-    <a href="https://designer-mkovalenko.ru/en/#contacts">Contacts</a>
-    <a href="/ru/" class="lang-switch">RU</a>
+    <a href="https://designer-mkovalenko.ru/">Портфолио</a>
+    <a href="https://designer-mkovalenko.ru/#contacts">Контакты</a>
+    <a href="/" class="lang-switch">EN</a>
   </nav>
 </header>
 
 <section class="hero">
-  <p class="eyebrow">Design &amp; AI Journal</p>
-  <h1>Notes on design, tools,<br>and the business behind it</h1>
-  <p class="sub">Practical UI/UX insights, AI workflows, and lessons from real client work — by Mikhail Kovalenko.</p>
+  <p class="eyebrow">Дизайн и AI Журнал</p>
+  <h1>Заметки о дизайне, инструментах<br>и бизнесе за ними</h1>
+  <p class="sub">Практические советы по UI/UX, рабочие процессы с AI и уроки из реальных проектов — от Михаила Коваленко.</p>
 </section>
 
 <div class="categories">
-  <a href="#" class="active" data-cat="all">All <span class="count">(0)</span></a>
-  <a href="#" data-cat="cat-uiux">UI/UX Practice <span class="count">(0)</span></a>
-  <a href="#" data-cat="cat-ai">AI in Design <span class="count">(0)</span></a>
-  <a href="#" data-cat="cat-tools">Tools &amp; Services <span class="count">(0)</span></a>
-  <a href="#" data-cat="cat-business">Business &amp; Clients <span class="count">(0)</span></a>
+  <a href="#" class="active" data-cat="all">Все <span class="count">(0)</span></a>
+  <a href="#" data-cat="cat-uiux">UI/UX Практика <span class="count">(0)</span></a>
+  <a href="#" data-cat="cat-ai">AI в дизайне <span class="count">(0)</span></a>
+  <a href="#" data-cat="cat-tools">Инструменты и сервисы <span class="count">(0)</span></a>
+  <a href="#" data-cat="cat-business">Бизнес и клиенты <span class="count">(0)</span></a>
 </div>
 
 <div class="posts" id="posts">
     <!-- POSTS_START -->
-  <a href="/posts/ai-generated-ui-mockups-where-they-help-and-where-they-mislead.html" class="post-row cat-ai">
-    <span class="tag">AI in Design</span>
-    <div class="post-title-col">
-      <h2>AI-Generated UI Mockups: Where They Help and Where They Mislead</h2>
-      <span class="post-date">Aug 31, 2026</span>
-    </div>
-    <div class="post-desc-col">
-      <p>A practical look at where AI-generated UI mockups speed up design work — and where they quietly create false confidence that costs teams la…</p>
-      <span class="read-link">Read →</span>
-    </div>
-  </a>
-  <a href="/posts/10-ux-mistakes-even-experienced-designers-make.html" class="post-row cat-uiux">
-    <span class="tag">UI/UX Practice</span>
-    <div class="post-title-col">
-      <h2>10 UX Mistakes Even Experienced Designers Make</h2>
-      <span class="post-date">Aug 29, 2026</span>
-    </div>
-    <div class="post-desc-col">
-      <p>Seniority doesn't inoculate you against bad UX habits. Here are 10 mistakes seasoned designers still make — and how to catch them early.</p>
-      <span class="read-link">Read →</span>
-    </div>
-  </a>
-  <a href="/posts/the-design-brief-that-saves-you-from-endless-revisions-7-questions-to-ask-clients.html" class="post-row cat-business">
-    <span class="tag">Business &amp; Clients</span>
-    <div class="post-title-col">
-      <h2>The Design Brief That Saves You From Endless Revisions</h2>
-      <span class="post-date">Aug 27, 2026</span>
-    </div>
-    <div class="post-desc-col">
-      <p>7 questions to ask clients before opening Figma — a practical brief framework that kills scope creep and endless revision loops.</p>
-      <span class="read-link">Read →</span>
-    </div>
-  </a>
-  <a href="/posts/elementor-pro-hidden-features-almost-nobody-uses.html" class="post-row cat-tools">
-    <span class="tag">Tools &amp; Services</span>
-    <div class="post-title-col">
-      <h2>Elementor Pro: Hidden Features Almost Nobody Uses</h2>
-      <span class="post-date">Aug 27, 2026</span>
-    </div>
-    <div class="post-desc-col">
-      <p>A practical look at underused Elementor Pro features — Display Conditions, Role Manager, Dynamic Tags — that save agencies real hours.</p>
-      <span class="read-link">Read →</span>
-    </div>
-  </a>
-  <a href="/posts/7-ai-figma-plugins-that-actually-save-time-in-2026.html" class="post-row cat-ai">
-    <span class="tag">AI in Design</span>
-    <div class="post-title-col">
-      <h2>7 AI Figma Plugins That Actually Save Time in 2026</h2>
-      <span class="post-date">Aug 25, 2026</span>
-    </div>
-    <div class="post-desc-col">
-      <p>A working freelance designer tests 7 AI Figma plugins in 2026 — what genuinely cuts hours from client projects, and what's just noise.</p>
-      <span class="read-link">Read →</span>
-    </div>
-  </a>
-  <a href="/posts/how-to-read-a-design-in-3-seconds-the-squint-test.html" class="post-row cat-uiux">
-    <span class="tag">UI/UX Practice</span>
-    <div class="post-title-col">
-      <h2>How to Read a Design in 3 Seconds: The Squint Test</h2>
-      <span class="post-date">Aug 23, 2026</span>
-    </div>
-    <div class="post-desc-col">
-      <p>A fast, low-tech method for catching hierarchy problems before clients or users do — how the squint test works and what it reveals.</p>
-      <span class="read-link">Read →</span>
-    </div>
-  </a>
   <!-- POSTS_END -->
 </div>
 
 <div class="contact-panel">
   <span class="badge">
-    Get in touch
+    Написать
     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M7 7H17V17" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       <path d="M17 7L7 17" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
   </span>
-  <h2>Have a project<br>or just a <em>question?</em></h2>
-  <p class="sub">Pick whichever is easier for you — both go straight to me</p>
+  <h2>Есть проект<br>или просто <em>вопрос?</em></h2>
+  <p class="sub">Выберите удобный способ — оба ведут напрямую ко мне</p>
 
   <div class="contact-cards">
     <div class="contact-card">
-      <h3>Send a message</h3>
-      <p>Tell me what you're working on and I'll reply within 24 hours</p>
-      <a href="https://designer-mkovalenko.ru/en/#contacts">Contact me <span class="arrow"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 7H17V16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      <h3>Написать сообщение</h3>
+      <p>Расскажите, над чем вы работаете, и я отвечу в течение 24 часов</p>
+      <a href="https://designer-mkovalenko.ru/#contacts">Написать мне <span class="arrow"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 7H17V16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
     </div>
     <div class="contact-card">
-      <h3>See the work first</h3>
-      <p>Browse full case studies and past projects before reaching out</p>
-      <a href="https://designer-mkovalenko.ru/en/">View portfolio <span class="arrow"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 7H17V16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      <h3>Сначала посмотреть работы</h3>
+      <p>Посмотрите кейсы и прошлые проекты, прежде чем обращаться</p>
+      <a href="https://designer-mkovalenko.ru/">Смотреть портфолио <span class="arrow"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 7H17V16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
     </div>
   </div>
 
-  <p class="note">No pressure, no sales pitch — just a conversation.</p>
+  <p class="note">Без давления, без продажи — просто разговор.</p>
 </div>
 
 <footer>
-  <span>&copy; 2026 Mikhail Kovalenko</span>
-  <a href="https://designer-mkovalenko.ru/en/">designer-mkovalenko.ru</a>
+  <span>&copy; 2026 Михаил Коваленко</span>
+  <a href="https://designer-mkovalenko.ru/">designer-mkovalenko.ru</a>
 </footer>
 
   <script>
