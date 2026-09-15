@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Portfolio That Sells: Agencies vs. Direct Clients — Mikhail Kovalenko</title>
+<meta name="description" content="Agencies and direct clients read your portfolio for different reasons. Here's how to build one that converts both — without diluting either.">
+<link rel="alternate" hreflang="en" href="https://blog.designer-mkovalenko.ru/posts/a-portfolio-that-sells-what-to-show-agencies-vs-direct-clients.html">
+<link rel="alternate" hreflang="ru" href="https://blog.designer-mkovalenko.ru/ru/posts/a-portfolio-that-sells-what-to-show-agencies-vs-direct-clients.html">
+<link rel="alternate" hreflang="x-default" href="https://blog.designer-mkovalenko.ru/posts/a-portfolio-that-sells-what-to-show-agencies-vs-direct-clients.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700;900&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue: #2A5298;
+    --black: #080808;
+    --gray: #6b6b6b;
+    --border: #e5e5e5;
+    --cat-uiux: #2A5298;
+    --cat-ai: #8B3FD1;
+    --cat-tools: #C2410C;
+    --cat-business: #15803D;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter Tight', -apple-system, sans-serif;
+    color: var(--black);
+    background: #ffffff;
+    line-height: 1.6;
+  }
+  h1, h2, h3, .logo, .tag {
+    font-family: 'Oswald', sans-serif;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 6vw;
+    border-bottom: 1px solid var(--border);
+  }
+  .logo {
+    font-weight: 900;
+    font-size: 22px;
+    letter-spacing: -0.5px;
+    color: var(--blue);
+    text-decoration: none;
+  }
+  nav a {
+    color: var(--black);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    margin-left: 32px;
+  }
+  nav a:hover { color: var(--blue); }
+  .lang-switch {
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 4px 10px;
+    font-size: 13px !important;
+  }
+  .lang-switch:hover { border-color: var(--blue); }
+
+  .breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 6vw;
+    font-size: 13px;
+    color: var(--gray);
+  }
+  .breadcrumbs a {
+    color: var(--gray);
+    text-decoration: none;
+  }
+  .breadcrumbs a:hover { color: var(--cat, var(--blue)); }
+  .breadcrumbs .sep { color: #ccc; }
+  .breadcrumbs .current {
+    color: var(--black);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 480px;
+  }
+
+  .page {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 60px 6vw 100px;
+    display: flex;
+    gap: 64px;
+    align-items: flex-start;
+  }
+  .toc {
+    width: 260px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 40px;
+  }
+  .toc-title {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--gray);
+    margin-bottom: 16px;
+  }
+  .toc ol {
+    list-style: none;
+    position: relative;
+    padding-left: 26px;
+  }
+  .toc ol::before {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 6px;
+    bottom: 6px;
+    width: 1px;
+    background: var(--border);
+  }
+  .toc li {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  .toc li::before {
+    content: '';
+    position: absolute;
+    left: -26px;
+    top: 5px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+  }
+  .toc li:has(a.active)::before {
+    background: var(--cat, var(--blue));
+    border-color: var(--cat, var(--blue));
+  }
+  .toc a {
+    font-size: 14px;
+    color: var(--black);
+    text-decoration: none;
+    display: block;
+    line-height: 1.4;
+  }
+  .toc a:hover { color: var(--cat, var(--blue)); }
+
+  article {
+    max-width: 720px;
+    flex: 1;
+  }
+  .tag {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--cat, var(--blue));
+    background: color-mix(in srgb, var(--cat, var(--blue)) 12%, white);
+    letter-spacing: 0.5px;
+    padding: 5px 12px;
+    border-radius: 3px;
+    display: inline-block;
+  }
+  .page.cat-uiux { --cat: var(--cat-uiux); }
+  .page.cat-ai { --cat: var(--cat-ai); }
+  .page.cat-tools { --cat: var(--cat-tools); }
+  .page.cat-business { --cat: var(--cat-business); }
+  h1 {
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+    margin: 16px 0 20px;
+  }
+  .meta {
+    font-size: 14px;
+    color: var(--gray);
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 32px;
+  }
+  article { counter-reset: section; }
+  article h2::before {
+    counter-increment: section;
+    content: "SECTION " counter(section, decimal-leading-zero);
+    display: table;
+    background: #F0F0F0;
+    color: var(--cat, var(--blue));
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 6px 14px;
+    border-radius: 0;
+    margin-bottom: 16px;
+  }
+  article h2 {
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    margin: 120px 0 24px;
+  }
+  article h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 32px 0 12px;
+  }
+  article p {
+    font-size: 17px;
+    margin-bottom: 18px;
+    color: #3C3C3C;
+  }
+  article ul, article ol {
+    margin: 0 0 18px 22px;
+    font-size: 17px;
+  }
+  article li { margin-bottom: 8px; }
+  article a { color: var(--blue); }
+  article strong { font-weight: 700; }
+  .cta {
+    margin-top: 56px;
+    padding: 32px;
+    background: #f7f7f9;
+    border-radius: 4px;
+    text-align: center;
+  }
+  .cta p {
+    font-weight: 700;
+    font-size: 19px;
+    margin-bottom: 16px;
+  }
+  .cta a {
+    display: inline-block;
+    background: var(--black);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 14px 32px;
+    border-radius: 4px;
+  }
+  .cta a:hover { background: var(--blue); }
+  footer {
+    padding: 40px 6vw;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: var(--gray);
+  }
+  footer a { color: var(--black); text-decoration: none; font-weight: 600; }
+
+  .toc a { transition: 0.2s; }
+  .toc a.active {
+    color: var(--cat, var(--blue));
+  }
+  .toc a.active::before { color: var(--cat, var(--blue)); }
+
+  blockquote {
+    border-left: 4px solid var(--cat, var(--blue));
+    padding: 24px;
+    margin: 32px 0;
+    background: #F7F7F7;
+    font-size: 20px;
+    font-weight: 500;
+    font-style: normal;
+    color: #222;
+    line-height: 1.5;
+  }
+  blockquote cite {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    color: var(--gray);
+  }
+
+  .faq-item {
+    background: #f7f7f9;
+    border-radius: 4px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    transition: background 0.2s, color 0.2s;
+  }
+  .faq-item[open] { background: var(--cat, var(--blue)); }
+  .faq-item[open] summary { color: #fff; }
+  .faq-item summary {
+    list-style: none;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after {
+    content: '+';
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--cat, var(--blue));
+    flex-shrink: 0;
+  }
+  .faq-item[open] summary::after { content: '−'; color: #fff; }
+  .faq-item p {
+    font-size: 16px;
+    color: #444;
+    margin-top: 12px;
+  }
+  .faq-item[open] p { color: #ffffffdd; }
+
+  .steps { margin: 32px 0; }
+  .step {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 28px;
+  }
+  .step-number {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 900;
+    font-size: 32px;
+    color: var(--cat, var(--blue));
+    flex-shrink: 0;
+    width: 48px;
+    line-height: 1;
+  }
+  .step-body h4 {
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .step-body p {
+    font-size: 15px;
+    color: #444;
+    margin-bottom: 0;
+  }
+
+  .checklist {
+    list-style: none;
+    margin: 0 0 18px 0;
+  }
+  .checklist li {
+    display: flex;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 16px;
+  }
+  .checklist li:last-child { border-bottom: none; }
+  .checklist li::before {
+    content: '✓';
+    color: var(--cat, var(--blue));
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .author-box {
+    display: flex;
+    gap: 24px;
+    margin-top: 120px;
+    padding: 32px;
+    background: #f7f7f9;
+    border-radius: 4px;
+  }
+  .author-photo {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+  .author-eyebrow {
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--gray);
+    margin-bottom: 6px;
+  }
+  .author-info h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .author-info p {
+    font-size: 15px;
+    color: #444;
+    margin-bottom: 14px;
+  }
+  .author-links {
+    display: flex;
+    gap: 20px;
+  }
+  .author-links a {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--cat, var(--blue));
+    text-decoration: none;
+  }
+  @media (max-width: 560px) {
+    .author-box { flex-direction: column; }
+  }
+
+  @media (max-width: 900px) {
+    .page { flex-direction: column; gap: 32px; padding: 40px 6vw 80px; }
+    .toc { width: 100%; position: static; }
+  }
+
+  .contact-panel {
+    width: 100%;
+    margin: 40px 0 0;
+    padding: 150px 6vw;
+    background: var(--black);
+    border-radius: 0;
+    border-bottom: 1px solid #212121;
+    text-align: left;
+  }
+  .contact-panel .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ffffff;
+    margin-bottom: 16px;
+  }
+  .contact-panel .badge svg {
+    width: 14px;
+    height: 14px;
+  }
+  .contact-panel h2 {
+    font-size: 80px;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1.15;
+    margin-bottom: 16px;
+    color: #ffffff;
+  }
+  .contact-panel h2 em {
+    color: #2A5298;
+    font-style: normal;
+  }
+  .contact-panel .sub {
+    font-size: 17px;
+    color: #b0b0b0;
+    max-width: 480px;
+    margin: 0 0 80px;
+  }
+  .contact-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    max-width: 100%;
+    margin: 0 0 32px;
+  }
+  .contact-card {
+    background: #0F0F0F;
+    border: none;
+    border-radius: 6px;
+    padding: 32px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+  }
+  .contact-card h3 {
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #ffffff;
+  }
+  .contact-card p {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 40px;
+  }
+  .contact-card a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    padding: 0 0 6px;
+    border-bottom: 1px solid #fff;
+    border-radius: 0;
+    margin-top: auto;
+    width: fit-content;
+  }
+  .contact-card a .arrow {
+    display: inline-flex;
+    transition: transform 0.3s;
+  }
+  .contact-card a .arrow svg {
+    width: 16px;
+    height: 16px;
+  }
+  .contact-card a:hover .arrow { transform: rotate(90deg); }
+  .contact-panel .note {
+    font-size: 13px;
+    color: #999;
+    text-align: left;
+  }
+  footer {
+    background: var(--black);
+    padding: 20px 6vw;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #999;
+  }
+  footer a { color: #ffffff; text-decoration: none; font-weight: 600; }
+
+  @media (max-width: 640px) {
+    .contact-panel { padding: 80px 6vw; }
+    .contact-panel h2 { font-size: 40px; }
+    .contact-cards { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="https://designer-mkovalenko.com/" class="logo">KOVALENKO</a>
+  <nav>
+    <a href="https://designer-mkovalenko.com/">Portfolio</a>
+    <a href="https://designer-mkovalenko.com/#contacts">Contacts</a>
+    <a href="/ru/posts/a-portfolio-that-sells-what-to-show-agencies-vs-direct-clients.html" class="lang-switch">RU</a>
+  </nav>
+</header>
+
+<div class="breadcrumbs">
+  <a href="/">Home</a>
+  <span class="sep">›</span>
+  <span class="current">A Portfolio That Sells: Agencies vs. Direct Clients</span>
+</div>
+
+<div class="page cat-business">
+  <aside class="toc">
+    <div class="toc-title">Contents</div>
+    <ol>
+            <li><a href="#two-buyers-two-completely-different-questions">Two Buyers, Two Completely Different Questions</a></li>
+      <li><a href="#what-agencies-are-screening-for">What Agencies Are Screening For</a></li>
+      <li><a href="#what-direct-clients-are-screening-for">What Direct Clients Are Screening For</a></li>
+      <li><a href="#writing-case-studies-for-each-audience">Writing Case Studies for Each Audience</a></li>
+      <li><a href="#structure-order-and-what-to-cut">Structure, Order, and What to Cut</a></li>
+      <li><a href="#proof-pricing-and-testimonials-done-right">Proof, Pricing, and Testimonials Done Right</a></li>
+      <li><a href="#running-one-portfolio-or-two">Running One Portfolio or Two</a></li>
+    </ol>
+  </aside>
+
+  <article class="cat-business">
+    <span class="tag">Business & Clients</span>
+    <h1>A Portfolio That Sells: Agencies vs. Direct Clients</h1>
+    <div class="meta">Sep 15, 2026 · 20 min read</div>
+
+    <h2 id="two-buyers-two-completely-different-questions">Two Buyers, Two Completely Different Questions</h2>
+<p>I redesigned my portfolio four times in three years before I understood why it kept underperforming. The work was good. The case studies were detailed. The site loaded fast and looked clean. And yet I'd get warm interest from agencies and cold silence from founders, or the reverse — a founder would email me within an hour of finding my site, while an agency creative director would take one look and never respond. For a long time I assumed this was random. It wasn't. I was showing one portfolio to two buyers who were asking completely different questions.</p>
+<p>An agency looking at your portfolio is asking: "Can I plug this person into a project team without babysitting them, and will they make my studio look good to my client?" A direct client — a founder, a small business owner, a solo operator — is asking: "Can this person solve my specific problem, and do I trust them enough to hand over money before I fully understand what I'm buying?" Those are not variations on the same question. They're different questions entirely, and a portfolio built to answer one usually answers the other badly.</p>
+<p>This matters more than most freelancers admit to themselves. Early on, it's tempting to build a single portfolio and assume good work speaks for itself. Good work does speak — but it speaks different sentences to different listeners. An agency doesn't care about your origin story or how passionate you are about solving problems for small businesses. A direct client doesn't care that you shipped a design system used across four product squads with a staggered rollout plan and stakeholder alignment workshops. Neither is impressed by the version of the story meant for the other, and worse, the wrong framing can actively read as a red flag: agencies see "small business energy" and worry about process rigor; founders see "enterprise design ops" language and worry about cost and speed.</p>
+<p>The fix isn't necessarily two separate websites, though that's an option I'll get into later. The fix is understanding precisely what each buyer is screening for, then making deliberate choices about what to show, what to say, and what to leave out — because leaving things out is just as strategic as including them.</p>
+
+<h2 id="what-agencies-are-screening-for">What Agencies Are Screening For</h2>
+<p>Agencies hire freelancers to reduce risk on a project they've already sold, usually under a timeline that's tighter than they'd like. The creative director or project lead reviewing your portfolio isn't shopping for inspiration. They're doing due diligence on a specific, narrow question: will this person fit into our existing process without friction. That reframes almost everything about what belongs on the page.</p>
+<p>First, agencies are looking for evidence of process fluency, not process ownership. They don't need to see that you can run a discovery workshop from scratch — they need to see that you can walk into a Figma file that someone else structured, follow an existing design system, and produce components that don't need to be rebuilt by their internal team after you leave. This is a subtle but important distinction. Direct clients want to see you leading. Agencies want to see you fitting in. A case study that reads like "I ran the entire process solo, made all the calls, and shipped it" can actually work against you with an agency reviewer, because it signals someone used to full autonomy who might chafe at being told to follow someone else's design tokens.</p>
+<p>Second, agencies are scanning for craft consistency under constraints, not raw creativity. They've usually already sold the creative direction to their client. What they need from a freelancer is someone who can execute that direction reliably across a large surface area — twenty screens, forty components, three breakpoints — without the quality dropping on screen thirty-one. Show density. Show range across a single project rather than range across many small ones. A portfolio piece with one hero shot and a paragraph of narrative tells an agency nothing about your endurance. A piece with a component library, several full flows, and evidence of edge-case handling tells them you can be trusted with volume.
+
+Third — and this one surprises newer freelancers — agencies care enormously about how you talk about collaboration, because they're mentally simulating what a Slack thread with you looks like. Case study language that centers "I decided," "I felt," "my vision" repeatedly, without ever mentioning a stakeholder, a developer handoff, or a revision cycle, reads as a solo-practitioner mindset. Agencies aren't hiring a visionary; they're hiring a reliable node in a network. Language like "I worked with the lead developer to adjust the grid for their existing component library" or "after two rounds of stakeholder feedback, we consolidated three navigation patterns into one" signals someone who has already been inside a team process and survived it.</p>
+<p>Fourth, agencies are looking at your rate signaling even when there's no pricing on the page. Polish, typography discipline, restraint in case study length, and a portfolio that doesn't try too hard to be clever all read as "mid-to-senior, comfortable, not desperate." Overly elaborate personal branding, excessive personality copywriting, or a portfolio that feels like it's trying to sell you on a lifestyle rather than a skill set can read as junior overcompensation to an agency reviewer who has seen a thousand portfolios and is pattern-matching fast. Agencies move quickly through review; you have roughly the time it takes to scroll through one case study to make the case that you belong in their contractor pool.</p>
+<p>Finally, agencies want tool and system fluency spelled out plainly, almost like a resume, because they need to know if you'll require ramp-up time. If you're fluent in component-based design systems, if you've used Figma variables and auto layout at a production level, if you've handed off to developers using specific documentation conventions — say so directly, even in a slightly dry, factual way. This is one of the few places where being explicit rather than narrative actually helps, because the reviewer is scanning for compatibility, not being persuaded emotionally.</p>
+
+<h2 id="what-direct-clients-are-screening-for">What Direct Clients Are Screening For</h2>
+<p>A direct client's evaluation process is almost the inverse. They are not doing due diligence against an internal process, because they usually don't have one. They are trying to answer a much scarier, much more personal question: "Do I trust this stranger enough to give them money for something I can't fully evaluate myself?" Most founders and small business owners hiring a designer for the first time don't know what good UX looks like in technical terms. They know what a bad experience with a freelancer feels like — ghosting, scope creep, a final deliverable that doesn't match what they imagined — and they are scanning your portfolio for signals that you won't do that to them.</p>
+<p>This changes the entire narrative structure that works. Where an agency wants density and process fluency, a direct client wants story and outcome. They want to see a problem they recognize — "our signup flow was leaking 40% of users at the payment step" — followed by a decision they can understand without design vocabulary, followed by a number or a result that maps to something they care about, like revenue, signups, support tickets, or time saved. If your case study reads like an internal design system audit, a founder's eyes glaze over by paragraph two, not because they're unintelligent, but because you're answering a question they didn't ask.</p>
+<p>Direct clients are also screening for you, the person, far more than agencies do. They can't offload the working relationship to a project manager the way an agency can; they'll be emailing you directly, waiting on your responses, trusting your judgment calls in real time. This means bios, tone of voice, and a sense of how you communicate matter enormously here in a way they simply don't for agency review. A slightly more personal "about" section, a photo, a clear statement of who you like working with and how you actually run engagements — these aren't fluff for this audience. They're risk-reduction signals, doing the same job that process documentation does for agencies, just aimed at a different fear.</p>
+<p>Pricing transparency, or at least pricing logic, matters far more to direct clients too. Founders and small business owners are frequently price-anxious in a way agencies never are, because agencies have already budgeted a line item and know the market rate; a founder hiring their first designer often has no idea if "a website redesign" costs two thousand dollars or twenty thousand, and that uncertainty is a major source of hesitation before they'll even reach out. You don't need a public price list, but showing project scale — "this was a six-week engagement," "this was a two-day sprint," "this included ongoing support for three months" — gives them enough of a frame to self-select before wasting your time or theirs.</p>
+<p>Testimonials do more work here than almost anywhere else in the portfolio. Agencies mostly discount testimonials as marketing copy; they're evaluating your actual work and process fit directly. Direct clients, by contrast, weigh testimonials heavily, because a testimonial from someone who sounds like them — another founder, another small business owner, someone describing the working relationship in plain language — is the single closest thing to a personal referral they can get from a stranger's website. A testimonial that says "Maria communicated clearly every step and delivered exactly what she promised, on time" does more conversion work for this audience than a beautifully designed case study with no human voice in it at all.</p>
+<p>One more thing direct clients screen for that agencies don't: evidence that you understand their business, not just their interface. A founder wants to see that you asked about conversion goals, customer segments, or business constraints — not just Figma frames. If your case studies never mention a business outcome, a direct client can't tell if you're a service provider who understands commerce or a hobbyist who makes things look nice. That distinction is the difference between "I'll hire this person" and "this is a nice portfolio, but I need someone who gets business."</p>
+
+<h2 id="writing-case-studies-for-each-audience">Writing Case Studies for Each Audience</h2>
+<p>Once you understand the two different screening processes, the case study writing itself becomes a matter of choosing which lens to shoot through, project by project, rather than trying to write one description that satisfies everyone. Here's how the same project can be written two ways, because I've genuinely done this — I keep two versions of several case studies and swap which one appears depending on which audience I expect to be looking that month.</p>
+<p>For an agency-facing version of a case study, lead with scope and constraints. Open with something like: "Brought in mid-project to extend an existing design system across a new product surface, working within an established component library and a four-week timeline." That single sentence tells an agency reviewer everything they need in order to keep reading: you can join mid-stream, you respect existing systems, you can hit a deadline. Follow this with specifics about collaboration — who you worked with, what the handoff process looked like, how revisions were incorporated — and close with a note about deliverables in their language: annotated specs, a component library update, developer handoff documentation. Visuals for this version should favor density: full flows, component variants, states (empty, error, loading), and if possible, a shot of the design system itself, because agencies are often silently evaluating whether you could contribute to systems work, not just screens.</p>
+<p>For a direct-client-facing version of the same project, if it's even relevant to show them (sometimes it isn't — more on that below), lead with the business problem in plain language: "The client's onboarding flow had a 35% drop-off rate before signup completion." Cut almost all system language. Replace "extended the design system's component library" with "designed a simpler flow that removed two unnecessary steps." Close with outcome, ideally a number, and if you don't have hard metrics, use a qualitative outcome tied to a business goal: "the client reported that new users were reaching their first successful action noticeably faster, and support tickets about onboarding dropped." Visuals here should favor story: before-and-after comparisons, a small number of key screens rather than exhaustive flows, and if possible, a mobile view since most direct clients will look at your site on their phone and mentally map your work onto how their own customers will experience it.</p>
+<p>There's a trap here worth naming directly: don't fabricate numbers you don't have. Both audiences can smell invented metrics, and agencies especially have seen enough portfolios to be skeptical of suspiciously round, suspiciously perfect statistics with no source. If you don't have hard data, say so honestly and lean on qualitative outcome instead — "the client extended the engagement for a second phase" is a completely legitimate substitute for a conversion percentage, and it signals something both audiences value: that the work was good enough to get more of it.</p>
+<p>Length should differ by audience too. Agency reviewers move fast and often review portfolios between other tasks; a case study that takes more than two or three minutes to get through will lose them, especially if the payoff is buried at the bottom. Direct clients, especially ones seriously evaluating a meaningful project, will often read more slowly and more emotionally invested — they're picturing their own business in your story — so a slightly longer, more narrative case study can actually work in your favor here, as long as it stays concrete and doesn't drift into abstraction about "the power of good design."</p>
+<p>One structural habit that serves both audiences, even though they're reading for different things: state the constraint before the solution. "The client had no existing brand guidelines and a two-week timeline" or "the existing codebase couldn't support a new component pattern, so I worked within Bootstrap's grid" — constraints, stated plainly, do double duty. They read as process maturity to agencies and as relatability and honesty to direct clients, because everyone who has ever run a real project knows that real projects have constraints, and a portfolio that only shows unconstrained, greenfield perfection reads as slightly unbelievable to both audiences, just for different reasons.</p>
+
+<h2 id="structure-order-and-what-to-cut">Structure, Order, and What to Cut</h2>
+<p>The order in which someone encounters your work matters almost as much as the work itself, because both audiences are making a keep-scrolling-or-leave decision within the first ten to fifteen seconds. This is where a lot of otherwise strong portfolios lose people — not because the work is weak, but because the first thing shown answers the wrong question for whoever happens to be looking.</p>
+<p>If you know your traffic skews toward one audience — check your inquiry history honestly, most freelancers already know this even if they haven't admitted it — build your homepage and project order around that audience first, and let the other audience's needs live one layer deeper, in a specific project page or a dedicated section. For freelancers who get roughly even inflow from both, the safest homepage move is to lead with the project that has the clearest business outcome and the cleanest visual craft simultaneously, because that's the rare piece that partially satisfies both screening processes at once, and then diverge clearly after that first impression.</p>
+<p>Cut mercilessly, and cut differently for each version. For an agency-facing portfolio path, cut anything that reads as personal brand strategy consulting, cut long personal narrative, cut projects where you had full creative control and no real stakeholder friction, because those don't demonstrate the fit-into-a-team skill agencies are checking for. Keep systems work, keep collaboration-heavy projects, keep anything involving handoff to developers.</p>
+<p>For a direct-client-facing path, cut dense system documentation, cut projects where the audience won't recognize the industry or business model, cut anything with heavy internal jargon left in from the original project ("refactored the DS tokens for the v3 rebrand"), because a founder reading that will assume the project is not relevant to their small business problem, even if the underlying skill absolutely transfers. Keep anything with a clear before-and-after, keep anything with a recognizable business type — restaurant, local service, ecommerce, small SaaS — and keep testimonials front and center rather than buried at the bottom of a long case study.</p>
+<p>Navigation itself can quietly do some of this segmenting work for you without requiring two separate sites. A simple filter or two visible categories — something like "Systems & Product Work" and "Brand & Launch Projects" — lets each visitor self-select almost immediately, and the act of choosing a category primes them to read what follows through the lens they came in with. This is a small structural move that costs almost nothing to build and meaningfully reduces the number of visitors who bounce because the first three projects they saw didn't match what they were looking for.</p>
+<p>Be honest about what your "about" page is doing, too, because it does different work for each audience. For agencies, keep it short, factual, and oriented around tools, process, and availability — think of it as closer to a bio than a personal essay. For direct clients, a slightly longer, more personal about section pays off, because it's often the deciding factor between two designers with comparably good case studies. People hire people, especially when they're spending their own money rather than a company's budget, and a founder choosing between you and another freelancer with similar work will often go with whoever seemed more like someone they'd enjoy several months of email exchanges with.</p>
+
+<h2 id="proof-pricing-and-testimonials-done-right">Proof, Pricing, and Testimonials Done Right</h2>
+<p>Proof is not one thing. It's a bundle of different signals, and each audience weighs the components of that bundle differently, so treating "social proof" as a single homogeneous section is a missed opportunity to do more targeted persuasion.</p>
+<p>For agencies, the strongest proof is other agencies. If you've worked through two or three studios already, naming them (with permission, obviously) does more for your agency-facing credibility than almost anything else you can put on the page, because it functions as an implicit reference check — "other studios trusted this person with client work, and it went fine." If you don't have agency names to show yet, the next best proof is showing evidence of process discipline: a screenshot of an organized Figma file structure, a snippet of handoff documentation, a mention of specific tools used in a way that signals real production experience rather than tutorial-level familiarity.</p>
+<p>For direct clients, the strongest proof is a specific, human testimonial that describes the relationship, not just the output. Generic testimonials — "great to work with, highly recommend" — are close to worthless because they could describe anyone. A testimonial that says something like "she pushed back when our idea wouldn't have worked and explained why in a way we actually understood, then delivered something better than what we originally asked for" does enormous work, because it answers the founder's real underlying fear: not "is the work good" but "will this person be honest and easy to work with when things get uncertain." If you can, ask past clients specifically to speak to communication and trust, not just final quality, when you request a testimonial — most people default to praising the output because that's what they think you want, and you have to explicitly steer them toward the relationship story that actually converts.</p>
+<p>On pricing, the two audiences again diverge sharply. Agencies almost never want to see your rates on a public portfolio, because they negotiate rates directly and a public number either constrains their margin conversation or, worse, signals a rate too low for the caliber of work they thought they were getting. For agency-facing pages, leave pricing off entirely and instead signal seniority through project scale and language, letting the actual rate conversation happen privately once there's mutual interest.</p>
+<p>Direct clients, on the other hand, frequently abandon an inquiry entirely rather than ask about price, because asking feels awkward or they assume the answer will be embarrassing for them either way. Some amount of pricing signal — even just "projects typically range from X to Y depending on scope" or clear package tiers — dramatically increases the number of qualified inquiries you get from this audience, because it lets people self-select before they've invested emotional energy in reaching out. I resisted this for a long time because it felt like leaving money on the table by not negotiating case by case, but in practice it filtered out a large volume of unqualified inquiries and increased the average quality of conversations I was actually having, which was a better trade than I expected.</p>
+<p>One more proof element that matters differently: availability and responsiveness signaling. Agencies want to know you can turn around fast within their sprint cadence; a line like "currently taking on 1-2 project-based collaborations per quarter" reads as in-demand and reliable. Direct clients want to know you're actually reachable and not going to disappear; a simple, direct statement about typical response time or current availability reduces the anxiety that's often sitting underneath their hesitation to reach out in the first place.</p>
+
+<h2 id="running-one-portfolio-or-two">Running One Portfolio or Two</h2>
+<p>The honest answer to whether you need two separate portfolios depends on how different your two audiences' needs actually are in your specific practice, and how much bandwidth you have to maintain more than one thing. I've tried both approaches over the years, and here's what I've actually learned from doing it, not just theorizing about it.</p>
+<p>A single portfolio with clear internal segmentation — distinct project categories, a couple of case studies deliberately written in each register, and an about page that hedges slightly toward whichever audience brings you more revenue — works fine for most freelancers, especially early on, because maintaining two full sites is a real ongoing cost in time that most people underestimate. The segmentation techniques covered earlier — category filters, leading with the right project, cutting jargon selectively per case study — get you most of the benefit of a two-portfolio strategy without doubling your maintenance burden.</p>
+<p>A genuinely separate portfolio, or at minimum a separate landing page with its own URL, starts to make sense once you have enough project volume that you're actively choosing to hide strong work from one audience because it would confuse the other, and once the two audiences represent meaningfully different revenue streams you're both actively pursuing rather than passively accepting whichever comes in. If you're deliberately pitching agencies for overflow contract work while also running direct-client acquisition through content or referrals, a split makes sense because you can tailor not just the content but the entire tone, pacing, and even domain-level framing (a subdomain or a distinct landing page for agency-facing work, separate from your main site) to match how each audience actually searches and evaluates.</p>
+<p>The failure mode I'd actively warn against is the one I lived through for a while: a single portfolio that tries to be everything to everyone in every single piece of copy, hedging every case study description into vague language that doesn't fully commit to either the systems-and-process story or the business-outcome story. That's the version that gets you polite silence from both audiences instead of enthusiastic yes from either. It's better to write two clearly opinionated versions of your best case studies and choose which one to show based on context — even manually, by having two PDF one-pagers you send depending on who's asking — than to write one watered-down version that technically covers both but persuades neither.</p>
+<p>If you take one thing from all of this, let it be this: your portfolio is not a museum of your work, it's an argument. Every case study, every testimonial, every line of about-page copy is either building a specific case to a specific reader or diluting one. Agencies are buying risk reduction and team fit. Direct clients are buying trust and outcome. The work you show can be identical in both directions — the same project, the same skill, the same craft — but the argument you build around it has to change, deliberately and unapologetically, depending on who's standing in front of it. Once I started treating my portfolio that way instead of as a static gallery, the quality of inquiries changed faster than any redesign of the visuals ever did.</p>
+
+    <div class="author-box">
+      <img src="data:image/jpeg;base64,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" alt="Mikhail Kovalenko" class="author-photo">
+      <div class="author-info">
+        <p class="author-eyebrow">About the author</p>
+        <h3>Mikhail Kovalenko</h3>
+        <p>Freelance UI/UX designer and web developer with 5+ years of experience and 400+ completed projects. Works with international clients and as a white-label partner for design studios and agencies — Figma, Webflow, WordPress + Elementor.</p>
+        <div class="author-links">
+          <a href="https://designer-mkovalenko.com/">→ Portfolio</a>
+          <a href="https://designer-mkovalenko.com/#contacts">→ Contact</a>
+        </div>
+      </div>
+    </div>
+  </article>
+</div>
+
+<div class="contact-panel">
+  <span class="badge">
+    Get in touch
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M7 7H17V17" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M17 7L7 17" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </span>
+  <h2>Have a project<br>or just a <em>question?</em></h2>
+  <p class="sub">Pick whichever is easier for you — both go straight to me</p>
+
+  <div class="contact-cards">
+    <div class="contact-card">
+      <h3>Send a message</h3>
+      <p>Tell me what you're working on and I'll reply within 24 hours</p>
+      <a href="https://designer-mkovalenko.com/#contacts">Contact me <span class="arrow"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 7H17V16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+    </div>
+    <div class="contact-card">
+      <h3>See the work first</h3>
+      <p>Browse full case studies and past projects before reaching out</p>
+      <a href="https://designer-mkovalenko.com/">View portfolio <span class="arrow"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 7H17V16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+    </div>
+  </div>
+
+  <p class="note">No pressure, no sales pitch — just a conversation.</p>
+</div>
+
+<footer>
+  <span>&copy; 2026 Mikhail Kovalenko</span>
+  <a href="https://designer-mkovalenko.com/">designer-mkovalenko.com</a>
+</footer>
+
+<script>
+  const tocLinks = document.querySelectorAll('.toc a');
+  const sections = Array.from(tocLinks).map(link => document.querySelector(link.getAttribute('href')));
+
+  function updateActiveTOC() {
+    let currentIndex = 0;
+    sections.forEach((section, i) => {
+      if (section && section.getBoundingClientRect().top < 120) {
+        currentIndex = i;
+      }
+    });
+    tocLinks.forEach((link, i) => {
+      link.classList.toggle('active', i === currentIndex);
+    });
+  }
+
+  window.addEventListener('scroll', updateActiveTOC);
+  updateActiveTOC();
+</script>
+
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "f5872579a62745ee83663335f9cc4bec"}'></script><!-- End Cloudflare Web Analytics -->
+
+</body>
+</html>
