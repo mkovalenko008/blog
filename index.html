@@ -169,6 +169,42 @@
     color: var(--blue);
   }
   .post-row:hover .read-link { text-decoration: underline; }
+  .post-row.page-first { border-top: none; }
+  .pagination {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    padding: 0 6vw 100px;
+    margin-top: -40px;
+  }
+  .pagination[hidden] { display: none; }
+  .pagination a, .pagination span {
+    min-width: 44px;
+    height: 44px;
+    padding: 0 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--black);
+    text-decoration: none;
+    transition: 0.15s;
+  }
+  .pagination a:hover { border-color: var(--black); }
+  .pagination a.active {
+    background: var(--black);
+    border-color: var(--black);
+    color: #fff;
+  }
+  .pagination a.disabled { opacity: 0.35; pointer-events: none; }
+  .pagination span { border-color: transparent; color: var(--gray); }
+  @media (max-width: 560px) {
+    .pagination a, .pagination span { min-width: 40px; height: 40px; padding: 0 8px; }
+  }
   @media (max-width: 900px) {
     .post-row { grid-template-columns: 1fr; gap: 8px; padding: 28px 0; }
     .post-row .tag, .post-title-col, .post-desc-col { grid-column: 1 / -1; }
@@ -687,6 +723,8 @@
   <!-- POSTS_END -->
 </div>
 
+<nav class="pagination" id="pagination" aria-label="Страницы блога" hidden></nav>
+
 <div class="contact-panel">
   <span class="badge">
     Написать
@@ -721,27 +759,92 @@
 
   <script>
   (function() {
-    var cards = document.querySelectorAll('.post-row');
+    var PER_PAGE = 10;
+    var cards = Array.from(document.querySelectorAll('.post-row'));
     var catLinks = document.querySelectorAll('.categories a');
+    var nav = document.getElementById('pagination');
+    var scrollAnchor = document.querySelector('.categories') || document.getElementById('posts');
 
     catLinks.forEach(function(link) {
       var cat = link.dataset.cat;
-      var count = cat === 'all' ? cards.length : Array.from(cards).filter(function(c) { return c.classList.contains(cat); }).length;
+      var count = cat === 'all' ? cards.length : cards.filter(function(c) { return c.classList.contains(cat); }).length;
       var countSpan = link.querySelector('.count');
       if (countSpan) countSpan.textContent = '(' + count + ')';
+    });
+
+    // State lives in the URL (?cat=…&page=…) so pages can be shared and the back button works,
+    // but switching never reloads: all posts are already in the HTML (good for search engines too).
+    function readState() {
+      var params = new URLSearchParams(location.search);
+      return { cat: params.get('cat') || 'all', page: Math.max(1, parseInt(params.get('page'), 10) || 1) };
+    }
+
+    function urlFor(cat, page) {
+      var params = new URLSearchParams();
+      if (cat !== 'all') params.set('cat', cat);
+      if (page > 1) params.set('page', page);
+      var q = params.toString();
+      return location.pathname + (q ? '?' + q : '');
+    }
+
+    // 1 … 4 5 6 … 12 — current page with neighbours, always first and last.
+    function pageList(current, total) {
+      var pages = [];
+      for (var i = 1; i <= total; i++) {
+        if (i === 1 || i === total || Math.abs(i - current) <= 1) pages.push(i);
+        else if (pages[pages.length - 1] !== '…') pages.push('…');
+      }
+      return pages;
+    }
+
+    function render(state) {
+      var matching = cards.filter(function(c) { return state.cat === 'all' || c.classList.contains(state.cat); });
+      var total = Math.max(1, Math.ceil(matching.length / PER_PAGE));
+      var page = Math.min(state.page, total);
+      var from = (page - 1) * PER_PAGE;
+
+      cards.forEach(function(c) { c.style.display = 'none'; c.classList.remove('page-first'); });
+      matching.slice(from, from + PER_PAGE).forEach(function(c, i) {
+        c.style.display = '';
+        if (i === 0) c.classList.add('page-first');
+      });
+
+      catLinks.forEach(function(l) { l.classList.toggle('active', l.dataset.cat === state.cat); });
+
+      nav.hidden = total <= 1;
+      var html = '<a href="' + urlFor(state.cat, page - 1) + '" data-page="' + (page - 1) + '" aria-label="Предыдущая страница"' + (page === 1 ? ' class="disabled"' : '') + '>←</a>';
+      pageList(page, total).forEach(function(p) {
+        html += p === '…'
+          ? '<span>…</span>'
+          : '<a href="' + urlFor(state.cat, p) + '" data-page="' + p + '"' + (p === page ? ' class="active" aria-current="page"' : '') + '>' + p + '</a>';
+      });
+      html += '<a href="' + urlFor(state.cat, page + 1) + '" data-page="' + (page + 1) + '" aria-label="Следующая страница"' + (page === total ? ' class="disabled"' : '') + '>→</a>';
+      nav.innerHTML = html;
+    }
+
+    function go(state) {
+      history.pushState(state, '', urlFor(state.cat, state.page));
+      render(state);
+      // Bring the list back into view only when the reader has scrolled past its top.
+      if (scrollAnchor.getBoundingClientRect().top < 0) scrollAnchor.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    nav.addEventListener('click', function(e) {
+      var a = e.target.closest('a[data-page]');
+      if (!a) return;
+      e.preventDefault();
+      go({ cat: readState().cat, page: parseInt(a.dataset.page, 10) });
     });
 
     catLinks.forEach(function(link) {
       link.addEventListener('click', function(e) {
         e.preventDefault();
-        catLinks.forEach(function(l) { l.classList.remove('active'); });
-        link.classList.add('active');
-        var cat = link.dataset.cat;
-        cards.forEach(function(card) {
-          card.style.display = (cat === 'all' || card.classList.contains(cat)) ? '' : 'none';
-        });
+        go({ cat: link.dataset.cat, page: 1 });
       });
     });
+
+    window.addEventListener('popstate', function() { render(readState()); });
+    render(readState());
   })();
 </script>
 
