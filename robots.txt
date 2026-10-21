@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://blog.designer-mkovalenko.ru/sitemap.xml
+Sitemap: https://blog.mkovalenko-web.ru/sitemap.xml
