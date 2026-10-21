@@ -6,6 +6,7 @@
 <title>{{POST_TITLE}} — Михаил Коваленко</title>
 <meta name="description" content="{{POST_DESCRIPTION}}">
 <link rel="canonical" href="https://blog.mkovalenko-web.ru/posts/{{POST_SLUG}}.html">
+{{POST_HEAD_META}}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700;900&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -638,6 +639,30 @@
     .contact-cards { grid-template-columns: 1fr; }
   }
 </style>
+<!-- Yandex.Metrika counter (same counter as mkovalenko-web.ru) -->
+<script type="text/javascript">
+  (function(m,e,t,r,i,k,a){
+    m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();
+    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+  })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=113673176', 'ym');
+  ym(113673176, 'init', {ssr:true, webvisor:true, clickmap:true, referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+
+  // Goals for blog → lead clicks. Create JavaScript-event goals with these ids in Metrika.
+  document.addEventListener('click', function(e) {
+    var a = e.target.closest && e.target.closest('a[href]');
+    if (!a) return;
+    var href = a.href;
+    var goal = href.indexOf('t.me/') !== -1 ? 'blog_telegram'
+      : (href.indexOf('behance.net') !== -1 || href.indexOf('#portfolio') !== -1) ? 'blog_portfolio'
+      : href.indexOf('://mkovalenko-web.ru') !== -1 ? 'blog_site'
+      : null;
+    if (goal) ym(113673176, 'reachGoal', goal);
+  });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/113673176" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 </head>
 <body>
 
