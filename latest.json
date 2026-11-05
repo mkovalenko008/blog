@@ -1,0 +1,59 @@
+{
+  "updated": "2026-11-05T08:01:06.001Z",
+  "posts": [
+    {
+      "title": "Нейросеть для создания логотипов: что бесплатно, а что нет",
+      "url": "https://blog.mkovalenko-web.ru/posts/neyroset-dlya-sozdaniya-logotipov-chto-besplatno-a-chto-net.html",
+      "image": "https://blog.mkovalenko-web.ru/og/neyroset-dlya-sozdaniya-logotipov-chto-besplatno-a-chto-net.png",
+      "category": "Инструменты и сервисы",
+      "categoryClass": "cat-tools",
+      "date": "4 нояб. 2026",
+      "excerpt": "Какая нейросеть для создания логотипов подходит бесплатно, что изменил Ideogram Vector 1.0 и в каких случаях без дизайнера не обойтись."
+    },
+    {
+      "title": "Конверсия сайта: как посчитать и какая считается хорошей",
+      "url": "https://blog.mkovalenko-web.ru/posts/konversiya-sayta-kak-poschitat-i-kakaya-schitaetsya-horoshey.html",
+      "image": "https://blog.mkovalenko-web.ru/og/konversiya-sayta-kak-poschitat-i-kakaya-schitaetsya-horoshey.png",
+      "category": "UI/UX Практика",
+      "categoryClass": "cat-uiux",
+      "date": "3 нояб. 2026",
+      "excerpt": "Конверсия сайта: формула, пример расчёта в Метрике, ориентиры по нишам и что менять на экранах, формах и кнопках, чтобы показатель вырос."
+    },
+    {
+      "title": "Figma AI: как пользоваться, как включить и сколько стоят токены",
+      "url": "https://blog.mkovalenko-web.ru/posts/figma-ai-kak-polzovatsya-kak-vklyuchit-i-skolko-stoyat-tokeny.html",
+      "image": "https://blog.mkovalenko-web.ru/og/figma-ai-kak-polzovatsya-kak-vklyuchit-i-skolko-stoyat-tokeny.png",
+      "category": "AI в дизайне",
+      "categoryClass": "cat-ai",
+      "date": "2 нояб. 2026",
+      "excerpt": "Figma AI глазами дизайнера: как включить, что умеет, как собрать макет и сколько тратится кредитов («токенов»). Тарифы и лимиты на ноябрь 2…"
+    },
+    {
+      "title": "Сайт на Тильде: цена, стоимость и что входит в бюджет",
+      "url": "https://blog.mkovalenko-web.ru/posts/sayt-na-tilde-tsena-stoimost-i-chto-vhodit-v-byudzhet.html",
+      "image": "https://blog.mkovalenko-web.ru/og/sayt-na-tilde-tsena-stoimost-i-chto-vhodit-v-byudzhet.png",
+      "category": "Бизнес и клиенты",
+      "categoryClass": "cat-business",
+      "date": "1 нояб. 2026",
+      "excerpt": "Сколько стоит сайт на Тильде под ключ и в месяц: тариф платформы, работа дизайнера, домен, поддержка. Разбор бюджета и чек-лист для заказчи…"
+    },
+    {
+      "title": "Тильда или WordPress: что выбрать для сайта бизнеса",
+      "url": "https://blog.mkovalenko-web.ru/posts/tilda-ili-wordpress-chto-vybrat-dlya-sayta-biznesa.html",
+      "image": "https://blog.mkovalenko-web.ru/og/tilda-ili-wordpress-chto-vybrat-dlya-sayta-biznesa.png",
+      "category": "Инструменты и сервисы",
+      "categoryClass": "cat-tools",
+      "date": "31 окт. 2026",
+      "excerpt": "Тильда или WordPress, что лучше для бизнеса: плюсы и минусы, скорость запуска, стоимость владения, SEO, интеграции. Чек-лист выбора от веб-…"
+    },
+    {
+      "title": "Структура лендинга с высокой конверсией: блоки и порядок",
+      "url": "https://blog.mkovalenko-web.ru/posts/struktura-lendinga-s-vysokoy-konversiey-bloki-i-poryadok.html",
+      "image": "https://blog.mkovalenko-web.ru/og/struktura-lendinga-s-vysokoy-konversiey-bloki-i-poryadok.png",
+      "category": "UI/UX Практика",
+      "categoryClass": "cat-uiux",
+      "date": "30 окт. 2026",
+      "excerpt": "Структура продающего лендинга по шагам: какие блоки нужны, в каком порядке их ставить, схема экранов, ошибки и чек-лист для Tilda."
+    }
+  ]
+}
