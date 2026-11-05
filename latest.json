@@ -1,6 +1,15 @@
 {
-  "updated": "2026-11-05T08:01:06.001Z",
+  "updated": "2026-11-05T17:29:17.240Z",
   "posts": [
+    {
+      "title": "Лендинг на Тильде: цена, сколько стоит и от чего зависит",
+      "url": "https://blog.mkovalenko-web.ru/posts/lending-na-tilde-tsena-skolko-stoit-i-ot-chego-zavisit.html",
+      "image": "https://blog.mkovalenko-web.ru/og/lending-na-tilde-tsena-skolko-stoit-i-ot-chego-zavisit.png",
+      "category": "Бизнес и клиенты",
+      "categoryClass": "cat-business",
+      "date": "5 нояб. 2026",
+      "excerpt": "Лендинг на Тильде: цена зависит от подхода, а не от числа блоков. Разбираю, из чего складывается стоимость, где можно сэкономить и как свер…"
+    },
     {
       "title": "Нейросеть для создания логотипов: что бесплатно, а что нет",
       "url": "https://blog.mkovalenko-web.ru/posts/neyroset-dlya-sozdaniya-logotipov-chto-besplatno-a-chto-net.html",
@@ -45,15 +54,6 @@
       "categoryClass": "cat-tools",
       "date": "31 окт. 2026",
       "excerpt": "Тильда или WordPress, что лучше для бизнеса: плюсы и минусы, скорость запуска, стоимость владения, SEO, интеграции. Чек-лист выбора от веб-…"
-    },
-    {
-      "title": "Структура лендинга с высокой конверсией: блоки и порядок",
-      "url": "https://blog.mkovalenko-web.ru/posts/struktura-lendinga-s-vysokoy-konversiey-bloki-i-poryadok.html",
-      "image": "https://blog.mkovalenko-web.ru/og/struktura-lendinga-s-vysokoy-konversiey-bloki-i-poryadok.png",
-      "category": "UI/UX Практика",
-      "categoryClass": "cat-uiux",
-      "date": "30 окт. 2026",
-      "excerpt": "Структура продающего лендинга по шагам: какие блоки нужны, в каком порядке их ставить, схема экранов, ошибки и чек-лист для Tilda."
     }
   ]
 }
