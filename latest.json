@@ -1,6 +1,15 @@
 {
-  "updated": "2026-11-05T17:29:17.240Z",
+  "updated": "2026-11-06T16:51:29.514Z",
   "posts": [
+    {
+      "title": "Как создать сайт на Тильде с помощью ИИ: что выйдет, а что нет",
+      "url": "https://blog.mkovalenko-web.ru/posts/kak-sozdat-sayt-na-tilde-s-pomoschyu-ii-chto-vyydet-a-chto-net.html",
+      "image": "https://blog.mkovalenko-web.ru/og/kak-sozdat-sayt-na-tilde-s-pomoschyu-ii-chto-vyydet-a-chto-net.png",
+      "category": "AI в дизайне",
+      "categoryClass": "cat-ai",
+      "date": "6 нояб. 2026",
+      "excerpt": "Как создать сайт на Тильде с помощью ИИ и нейросети: что генерируется нормально, что придётся доделывать вручную. Пошаговый план и чек-лист."
+    },
     {
       "title": "Лендинг на Тильде: цена, сколько стоит и от чего зависит",
       "url": "https://blog.mkovalenko-web.ru/posts/lending-na-tilde-tsena-skolko-stoit-i-ot-chego-zavisit.html",
@@ -45,15 +54,6 @@
       "categoryClass": "cat-business",
       "date": "1 нояб. 2026",
       "excerpt": "Сколько стоит сайт на Тильде под ключ и в месяц: тариф платформы, работа дизайнера, домен, поддержка. Разбор бюджета и чек-лист для заказчи…"
-    },
-    {
-      "title": "Тильда или WordPress: что выбрать для сайта бизнеса",
-      "url": "https://blog.mkovalenko-web.ru/posts/tilda-ili-wordpress-chto-vybrat-dlya-sayta-biznesa.html",
-      "image": "https://blog.mkovalenko-web.ru/og/tilda-ili-wordpress-chto-vybrat-dlya-sayta-biznesa.png",
-      "category": "Инструменты и сервисы",
-      "categoryClass": "cat-tools",
-      "date": "31 окт. 2026",
-      "excerpt": "Тильда или WordPress, что лучше для бизнеса: плюсы и минусы, скорость запуска, стоимость владения, SEO, интеграции. Чек-лист выбора от веб-…"
     }
   ]
 }
