@@ -1,6 +1,15 @@
 {
-  "updated": "2026-11-06T16:51:29.514Z",
+  "updated": "2026-11-07T15:46:14.586Z",
   "posts": [
+    {
+      "title": "Прототип сайта в Figma: как сделать до дизайна и зачем он нужен",
+      "url": "https://blog.mkovalenko-web.ru/posts/prototip-sayta-v-figma-kak-sdelat-do-dizayna-i-zachem-on-nuzhen.html",
+      "image": "https://blog.mkovalenko-web.ru/og/prototip-sayta-v-figma-kak-sdelat-do-dizayna-i-zachem-on-nuzhen.png",
+      "category": "UI/UX Практика",
+      "categoryClass": "cat-uiux",
+      "date": "7 нояб. 2026",
+      "excerpt": "Как сделать прототип сайта в Figma пошагово: структура, wireframe-блоки, шаблон, кликабельность и ошибки. Что это такое простыми словами и…"
+    },
     {
       "title": "Как создать сайт на Тильде с помощью ИИ: что выйдет, а что нет",
       "url": "https://blog.mkovalenko-web.ru/posts/kak-sozdat-sayt-na-tilde-s-pomoschyu-ii-chto-vyydet-a-chto-net.html",
@@ -45,15 +54,6 @@
       "categoryClass": "cat-ai",
       "date": "2 нояб. 2026",
       "excerpt": "Figma AI глазами дизайнера: как включить, что умеет, как собрать макет и сколько тратится кредитов («токенов»). Тарифы и лимиты на ноябрь 2…"
-    },
-    {
-      "title": "Сайт на Тильде: цена, стоимость и что входит в бюджет",
-      "url": "https://blog.mkovalenko-web.ru/posts/sayt-na-tilde-tsena-stoimost-i-chto-vhodit-v-byudzhet.html",
-      "image": "https://blog.mkovalenko-web.ru/og/sayt-na-tilde-tsena-stoimost-i-chto-vhodit-v-byudzhet.png",
-      "category": "Бизнес и клиенты",
-      "categoryClass": "cat-business",
-      "date": "1 нояб. 2026",
-      "excerpt": "Сколько стоит сайт на Тильде под ключ и в месяц: тариф платформы, работа дизайнера, домен, поддержка. Разбор бюджета и чек-лист для заказчи…"
     }
   ]
 }
