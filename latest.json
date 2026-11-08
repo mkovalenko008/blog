@@ -1,6 +1,15 @@
 {
-  "updated": "2026-11-07T15:46:14.586Z",
+  "updated": "2026-11-08T16:03:42.778Z",
   "posts": [
+    {
+      "title": "Как перенести дизайн сайта с Figma на Tilda без потерь",
+      "url": "https://blog.mkovalenko-web.ru/posts/kak-perenesti-dizayn-sayta-s-figma-na-tilda-bez-poter.html",
+      "image": "https://blog.mkovalenko-web.ru/og/kak-perenesti-dizayn-sayta-s-figma-na-tilda-bez-poter.png",
+      "category": "Инструменты и сервисы",
+      "categoryClass": "cat-tools",
+      "date": "8 нояб. 2026",
+      "excerpt": "Пошаговый разбор, как перенести дизайн сайта с Figma на Tilda: подготовка макета, плагин Figma to Tilda, Zero Block, адаптив и чек-лист про…"
+    },
     {
       "title": "Прототип сайта в Figma: как сделать до дизайна и зачем он нужен",
       "url": "https://blog.mkovalenko-web.ru/posts/prototip-sayta-v-figma-kak-sdelat-do-dizayna-i-zachem-on-nuzhen.html",
@@ -45,15 +54,6 @@
       "categoryClass": "cat-uiux",
       "date": "3 нояб. 2026",
       "excerpt": "Конверсия сайта: формула, пример расчёта в Метрике, ориентиры по нишам и что менять на экранах, формах и кнопках, чтобы показатель вырос."
-    },
-    {
-      "title": "Figma AI: как пользоваться, как включить и сколько стоят токены",
-      "url": "https://blog.mkovalenko-web.ru/posts/figma-ai-kak-polzovatsya-kak-vklyuchit-i-skolko-stoyat-tokeny.html",
-      "image": "https://blog.mkovalenko-web.ru/og/figma-ai-kak-polzovatsya-kak-vklyuchit-i-skolko-stoyat-tokeny.png",
-      "category": "AI в дизайне",
-      "categoryClass": "cat-ai",
-      "date": "2 нояб. 2026",
-      "excerpt": "Figma AI глазами дизайнера: как включить, что умеет, как собрать макет и сколько тратится кредитов («токенов»). Тарифы и лимиты на ноябрь 2…"
     }
   ]
 }
