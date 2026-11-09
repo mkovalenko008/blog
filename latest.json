@@ -1,6 +1,15 @@
 {
-  "updated": "2026-11-09T07:07:38.700Z",
+  "updated": "2026-11-09T19:55:29.113Z",
   "posts": [
+    {
+      "title": "Редизайн сайта: когда он нужен и сколько стоит",
+      "url": "https://blog.mkovalenko-web.ru/posts/redizayn-sayta-kogda-on-nuzhen-i-skolko-stoit.html",
+      "image": "https://blog.mkovalenko-web.ru/og/redizayn-sayta-kogda-on-nuzhen-i-skolko-stoit.png",
+      "category": "Бизнес и клиенты",
+      "categoryClass": "cat-business",
+      "date": "9 нояб. 2026",
+      "excerpt": "Что такое редизайн сайта, по каким признакам его пора заказывать, из чего складывается цена и как не переплатить. Разбор дизайнера с чек-ли…"
+    },
     {
       "title": "Как перенести дизайн сайта с Figma на Tilda без потерь",
       "url": "https://blog.mkovalenko-web.ru/posts/kak-perenesti-dizayn-sayta-s-figma-na-tilda-bez-poter.html",
@@ -45,15 +54,6 @@
       "categoryClass": "cat-tools",
       "date": "4 нояб. 2026",
       "excerpt": "Какая нейросеть для создания логотипов подходит бесплатно, что изменил Ideogram Vector 1.0 и в каких случаях без дизайнера не обойтись."
-    },
-    {
-      "title": "Конверсия сайта: как посчитать и какая считается хорошей",
-      "url": "https://blog.mkovalenko-web.ru/posts/konversiya-sayta-kak-poschitat-i-kakaya-schitaetsya-horoshey.html",
-      "image": "https://blog.mkovalenko-web.ru/og/konversiya-sayta-kak-poschitat-i-kakaya-schitaetsya-horoshey.png",
-      "category": "UI/UX Практика",
-      "categoryClass": "cat-uiux",
-      "date": "3 нояб. 2026",
-      "excerpt": "Конверсия сайта: формула, пример расчёта в Метрике, ориентиры по нишам и что менять на экранах, формах и кнопках, чтобы показатель вырос."
     }
   ]
 }
