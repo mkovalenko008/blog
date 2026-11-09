@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-08T16:03:42.778Z",
+  "updated": "2026-11-09T07:07:38.700Z",
   "posts": [
     {
       "title": "Как перенести дизайн сайта с Figma на Tilda без потерь",
@@ -8,16 +8,16 @@
       "category": "Инструменты и сервисы",
       "categoryClass": "cat-tools",
       "date": "8 нояб. 2026",
-      "excerpt": "Пошаговый разбор, как перенести дизайн сайта с Figma на Tilda: подготовка макета, плагин Figma to Tilda, Zero Block, адаптив и чек-лист про…"
+      "excerpt": "Как перенести дизайн сайта с Figma на Tilda: подготовка макета, плагин Figma to Tilda, Zero Block, адаптив, чек-лист. Плюс ответ на «Tilda…"
     },
     {
-      "title": "Прототип сайта в Figma: как сделать до дизайна и зачем он нужен",
+      "title": "Как сделать прототип сайта в Фигме: пошагово, с шаблоном",
       "url": "https://blog.mkovalenko-web.ru/posts/prototip-sayta-v-figma-kak-sdelat-do-dizayna-i-zachem-on-nuzhen.html",
       "image": "https://blog.mkovalenko-web.ru/og/prototip-sayta-v-figma-kak-sdelat-do-dizayna-i-zachem-on-nuzhen.png",
       "category": "UI/UX Практика",
       "categoryClass": "cat-uiux",
       "date": "7 нояб. 2026",
-      "excerpt": "Как сделать прототип сайта в Figma пошагово: структура, wireframe-блоки, шаблон, кликабельность и ошибки. Что это такое простыми словами и…"
+      "excerpt": "Как сделать прототип сайта в Фигме (Figma) пошагово: структура, блоки, шаблон, кликабельность и ошибки. Что это такое простыми словами и за…"
     },
     {
       "title": "Как создать сайт на Тильде с помощью ИИ: что выйдет, а что нет",
