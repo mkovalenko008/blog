@@ -1,6 +1,15 @@
 {
-  "updated": "2026-11-09T19:55:29.113Z",
+  "updated": "2026-11-10T17:08:38.321Z",
   "posts": [
+    {
+      "title": "Нейросеть для дизайна сайта: рабочий макет или просто картинка",
+      "url": "https://blog.mkovalenko-web.ru/posts/neyroset-dlya-dizayna-sayta-rabochiy-maket-ili-prosto-kartinka.html",
+      "image": "https://blog.mkovalenko-web.ru/og/neyroset-dlya-dizayna-sayta-rabochiy-maket-ili-prosto-kartinka.png",
+      "category": "AI в дизайне",
+      "categoryClass": "cat-ai",
+      "date": "10 нояб. 2026",
+      "excerpt": "Какая нейросеть для дизайна сайта даёт редактируемый макет, а какая рисует картинку. Сравнение сервисов, бесплатные варианты, чек-лист пров…"
+    },
     {
       "title": "Редизайн сайта: когда он нужен и сколько стоит",
       "url": "https://blog.mkovalenko-web.ru/posts/redizayn-sayta-kogda-on-nuzhen-i-skolko-stoit.html",
@@ -45,15 +54,6 @@
       "categoryClass": "cat-business",
       "date": "5 нояб. 2026",
       "excerpt": "Лендинг на Тильде: цена зависит от подхода, а не от числа блоков. Разбираю, из чего складывается стоимость, где можно сэкономить и как свер…"
-    },
-    {
-      "title": "Нейросеть для создания логотипов: что бесплатно, а что нет",
-      "url": "https://blog.mkovalenko-web.ru/posts/neyroset-dlya-sozdaniya-logotipov-chto-besplatno-a-chto-net.html",
-      "image": "https://blog.mkovalenko-web.ru/og/neyroset-dlya-sozdaniya-logotipov-chto-besplatno-a-chto-net.png",
-      "category": "Инструменты и сервисы",
-      "categoryClass": "cat-tools",
-      "date": "4 нояб. 2026",
-      "excerpt": "Какая нейросеть для создания логотипов подходит бесплатно, что изменил Ideogram Vector 1.0 и в каких случаях без дизайнера не обойтись."
     }
   ]
 }
