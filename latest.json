@@ -1,6 +1,15 @@
 {
-  "updated": "2026-11-10T17:08:38.321Z",
+  "updated": "2026-11-11T17:16:28.000Z",
   "posts": [
+    {
+      "title": "Аудит юзабилити сайта: что проверяют, цены и когда заказывать",
+      "url": "https://blog.mkovalenko-web.ru/posts/audit-yuzabiliti-sayta-chto-proveryayut-tseny-i-kogda-zakazyvat.html",
+      "image": "https://blog.mkovalenko-web.ru/og/audit-yuzabiliti-sayta-chto-proveryayut-tseny-i-kogda-zakazyvat.png",
+      "category": "UI/UX Практика",
+      "categoryClass": "cat-uiux",
+      "date": "11 нояб. 2026",
+      "excerpt": "Аудит юзабилити сайта: что входит в проверку, сколько он стоит у агентств и когда его стоит заказать. Чек-лист и разбор ошибок из проектов."
+    },
     {
       "title": "Нейросеть для дизайна сайта: рабочий макет или просто картинка",
       "url": "https://blog.mkovalenko-web.ru/posts/neyroset-dlya-dizayna-sayta-rabochiy-maket-ili-prosto-kartinka.html",
@@ -45,15 +54,6 @@
       "categoryClass": "cat-ai",
       "date": "6 нояб. 2026",
       "excerpt": "Как создать сайт на Тильде с помощью ИИ и нейросети: что генерируется нормально, что придётся доделывать вручную. Пошаговый план и чек-лист."
-    },
-    {
-      "title": "Лендинг на Тильде: цена, сколько стоит и от чего зависит",
-      "url": "https://blog.mkovalenko-web.ru/posts/lending-na-tilde-tsena-skolko-stoit-i-ot-chego-zavisit.html",
-      "image": "https://blog.mkovalenko-web.ru/og/lending-na-tilde-tsena-skolko-stoit-i-ot-chego-zavisit.png",
-      "category": "Бизнес и клиенты",
-      "categoryClass": "cat-business",
-      "date": "5 нояб. 2026",
-      "excerpt": "Лендинг на Тильде: цена зависит от подхода, а не от числа блоков. Разбираю, из чего складывается стоимость, где можно сэкономить и как свер…"
     }
   ]
 }
