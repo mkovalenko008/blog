@@ -1,6 +1,15 @@
 {
-  "updated": "2026-11-11T17:16:28.000Z",
+  "updated": "2026-11-12T17:39:41.746Z",
   "posts": [
+    {
+      "title": "Как выбрать хостинг для сайта после сбоя Beget и не потерять данные",
+      "url": "https://blog.mkovalenko-web.ru/posts/kak-vybrat-hosting-dlya-sayta-posle-sboya-beget-i-ne-poteryat-dannye.html",
+      "image": "https://blog.mkovalenko-web.ru/og/kak-vybrat-hosting-dlya-sayta-posle-sboya-beget-i-ne-poteryat-dannye.png",
+      "category": "Инструменты и сервисы",
+      "categoryClass": "cat-tools",
+      "date": "12 нояб. 2026",
+      "excerpt": "Как выбрать хостинг для сайта после сбоя Beget, узнать, где он размещён, и перенести сайт без потерь: чек-лист, порядок действий, ошибки."
+    },
     {
       "title": "Аудит юзабилити сайта: что проверяют, цены и когда заказывать",
       "url": "https://blog.mkovalenko-web.ru/posts/audit-yuzabiliti-sayta-chto-proveryayut-tseny-i-kogda-zakazyvat.html",
@@ -45,15 +54,6 @@
       "categoryClass": "cat-uiux",
       "date": "7 нояб. 2026",
       "excerpt": "Как сделать прототип сайта в Фигме (Figma) пошагово: структура, блоки, шаблон, кликабельность и ошибки. Что это такое простыми словами и за…"
-    },
-    {
-      "title": "Как создать сайт на Тильде с помощью ИИ: что выйдет, а что нет",
-      "url": "https://blog.mkovalenko-web.ru/posts/kak-sozdat-sayt-na-tilde-s-pomoschyu-ii-chto-vyydet-a-chto-net.html",
-      "image": "https://blog.mkovalenko-web.ru/og/kak-sozdat-sayt-na-tilde-s-pomoschyu-ii-chto-vyydet-a-chto-net.png",
-      "category": "AI в дизайне",
-      "categoryClass": "cat-ai",
-      "date": "6 нояб. 2026",
-      "excerpt": "Как создать сайт на Тильде с помощью ИИ и нейросети: что генерируется нормально, что придётся доделывать вручную. Пошаговый план и чек-лист."
     }
   ]
 }
