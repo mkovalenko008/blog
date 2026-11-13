@@ -1,6 +1,15 @@
 {
-  "updated": "2026-11-12T17:39:41.746Z",
+  "updated": "2026-11-13T17:17:10.418Z",
   "posts": [
+    {
+      "title": "Блокировка сайтов в России: что делать, если ваш сайт недоступен",
+      "url": "https://blog.mkovalenko-web.ru/posts/blokirovka-saytov-v-rossii-chto-delat-esli-vash-sayt-nedostupen.html",
+      "image": "https://blog.mkovalenko-web.ru/og/blokirovka-saytov-v-rossii-chto-delat-esli-vash-sayt-nedostupen.png",
+      "category": "Бизнес и клиенты",
+      "categoryClass": "cat-business",
+      "date": "13 нояб. 2026",
+      "excerpt": "Блокировка сайтов в России в 2026 году: как понять, что случилось с вашим сайтом, что делать в первые часы и как не потерять заявки и клиен…"
+    },
     {
       "title": "Как выбрать хостинг для сайта после сбоя Beget и не потерять данные",
       "url": "https://blog.mkovalenko-web.ru/posts/kak-vybrat-hosting-dlya-sayta-posle-sboya-beget-i-ne-poteryat-dannye.html",
@@ -45,15 +54,6 @@
       "categoryClass": "cat-tools",
       "date": "8 нояб. 2026",
       "excerpt": "Как перенести дизайн сайта с Figma на Tilda: подготовка макета, плагин Figma to Tilda, Zero Block, адаптив, чек-лист. Плюс ответ на «Tilda…"
-    },
-    {
-      "title": "Как сделать прототип сайта в Фигме: пошагово, с шаблоном",
-      "url": "https://blog.mkovalenko-web.ru/posts/prototip-sayta-v-figma-kak-sdelat-do-dizayna-i-zachem-on-nuzhen.html",
-      "image": "https://blog.mkovalenko-web.ru/og/prototip-sayta-v-figma-kak-sdelat-do-dizayna-i-zachem-on-nuzhen.png",
-      "category": "UI/UX Практика",
-      "categoryClass": "cat-uiux",
-      "date": "7 нояб. 2026",
-      "excerpt": "Как сделать прототип сайта в Фигме (Figma) пошагово: структура, блоки, шаблон, кликабельность и ошибки. Что это такое простыми словами и за…"
     }
   ]
 }
