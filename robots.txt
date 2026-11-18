@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /bot-state/
 
 Sitemap: https://blog.mkovalenko-web.ru/sitemap.xml
