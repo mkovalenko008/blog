@@ -1,6 +1,15 @@
 {
-  "updated": "2026-11-18T02:27:42.069Z",
+  "updated": "2026-11-19T01:54:35.171Z",
   "posts": [
+    {
+      "title": "robots.txt в Tilda: как редактировать и что закрыть от роботов",
+      "url": "https://blog.mkovalenko-web.ru/posts/robots-txt-v-tilda-kak-redaktirovat-i-chto-zakryt-ot-robotov.html",
+      "image": "https://blog.mkovalenko-web.ru/og/robots-txt-v-tilda-kak-redaktirovat-i-chto-zakryt-ot-robotov.png",
+      "category": "Инструменты и сервисы",
+      "categoryClass": "cat-tools",
+      "date": "19 нояб. 2026",
+      "excerpt": "Tilda robots.txt: как редактировать в настройках сайта, что закрыть, а что оставить открытым, чтобы сайт индексировался и попадал в ответы…"
+    },
     {
       "title": "Форма обратной связи на сайте: примеры, поля и расположение",
       "url": "https://blog.mkovalenko-web.ru/posts/forma-obratnoy-svyazi-na-sayte-primery-polya-i-raspolozhenie.html",
@@ -45,15 +54,6 @@
       "categoryClass": "cat-uiux",
       "date": "11 нояб. 2026",
       "excerpt": "Аудит юзабилити сайта: что входит в проверку, сколько он стоит у агентств и когда его стоит заказать. Чек-лист и разбор ошибок из проектов."
-    },
-    {
-      "title": "Нейросеть для дизайна сайта: рабочий макет или просто картинка",
-      "url": "https://blog.mkovalenko-web.ru/posts/neyroset-dlya-dizayna-sayta-rabochiy-maket-ili-prosto-kartinka.html",
-      "image": "https://blog.mkovalenko-web.ru/og/neyroset-dlya-dizayna-sayta-rabochiy-maket-ili-prosto-kartinka.png",
-      "category": "AI в дизайне",
-      "categoryClass": "cat-ai",
-      "date": "10 нояб. 2026",
-      "excerpt": "Какая нейросеть для дизайна сайта даёт редактируемый макет, а какая рисует картинку. Сравнение сервисов, бесплатные варианты, чек-лист пров…"
     }
   ]
 }
